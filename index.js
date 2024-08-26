@@ -69,12 +69,14 @@ function displayUserDetails() {
       "Password mismatch, Please re-enter confirm password"
     );
   }
+
+  const user = userDatabase[username];
+
   if (user == undefined){
     alert("User not found in the database")
     return;
   }
-
-  const user = userDatabase[username];
+  
   alert(` Welcome😊, user found with the following details:
     First Name: ${user.firstName}
     Last Name: ${user.lastName}
